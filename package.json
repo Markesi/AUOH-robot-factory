@@ -1,0 +1,27 @@
+{
+  "name": "auoh-robot-factory",
+  "version": "1.0.0",
+  "description": "AUOT exercise 01 at SEAMK.fi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markesi/AUOH-robot-factory.git"
+  },
+  "author": "Michelangelo Marchesi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markesi/AUOH-robot-factory/issues"
+  },
+  "homepage": "https://github.com/Markesi/AUOH-robot-factory#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
