@@ -27,23 +27,24 @@ const main_loop = () => {
    // console.log("Hello World");
     
     setTimeout(() => {
-
-        axios.get(osoite_robotin)
-          .then((res) => {
-            const start_time_stamp = new Date();
+        const start_time_stamp = new Date();
+        axios.get(osoite_robotin).then((res) => {
+            
          // console.log(res);
             let joints = [];
-            let matches = res.data.matchAll(regexp);
+            let matches = res.data.matchAll(regexp); // Regular expression filter
             let count = 0;
             for (const match of matches) {
                 count++;
                 if (count > 6) break;
+
                 const value = parseFloat(match[1]);
                 joints.push(value);
                 //console.log(value);
             }
             const time_stamp = new Date();
             const delta = time_stamp - start_time_stamp;
+
             console.log(time_stamp, joints, delta + "ms");
          });  
 
